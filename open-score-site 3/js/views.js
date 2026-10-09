@@ -145,7 +145,7 @@
     return `
       <div class="photo photo--founder has-img" style="position:relative;overflow:visible">
         <img src="${esc(p.framePhoto)}" alt="${esc(p.name)}" loading="lazy"
-             style="position:absolute;left:14%;top:13%;width:71%;height:73%;object-fit:cover;border-radius:6px;transform:rotate(4deg)">
+             style="position:absolute;left:14%;top:13%;width:71%;height:73%;object-fit:cover;border-radius:6px;transform:rotate(6deg)">
         <img src="${esc(p.photo)}" alt="" aria-hidden="true" loading="lazy" onerror="this.remove()"
              style="position:relative;display:block;width:100%;height:auto">
       </div>`;
