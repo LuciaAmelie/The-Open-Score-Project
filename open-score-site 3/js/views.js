@@ -1,4 +1,3 @@
-
 /*
  * Every page of the site. Each view returns:
  *   { title, nav, html, mount(root) }
@@ -9,7 +8,7 @@
   const OS = window.OS;
   const esc = OS.esc;
   const V = (OS.views = {});
- 
+
   /* ------------------------------------------------------------------ HOME */
   V.home = function () {
     const strip = [
@@ -29,7 +28,7 @@
         ${OS.staff('var(--lavender)', 'staff--hero', 'home-hero-staff.png')}
         <p class="home-tagline">Music is meant to be<br>explored.</p>
       </section>
- 
+
       <section class="score-strip" aria-label="What Open Score is about">
         <div class="wrap">
           <ul class="score-strip__list">
@@ -43,7 +42,7 @@
           </ul>
         </div>
       </section>
- 
+
       <section class="open-statement has-decos">
         ${OS.decos('home-open')}
         <h2 class="open-statement__text">
@@ -53,7 +52,7 @@
           <span>to everyone.</span>
         </h2>
       </section>
- 
+
       <section class="final-cta has-decos">
         ${OS.decos('home-cta')}
         <p class="final-cta__kicker">Curious?</p>
@@ -62,7 +61,7 @@
       </section>`
     };
   };
- 
+
   /* ----------------------------------------------------------------- ABOUT */
   V.about = function () {
     const team = window.OPEN_SCORE_TEAM || [];
@@ -79,7 +78,7 @@
           <a class="btn btn--violet" href="#/classes">Explore classes</a>
         </div>
       </section>
- 
+
       <section class="section section--mist">
         <div class="wrap what-is">
           <div class="what-is__intro">
@@ -95,7 +94,7 @@
           </ul>
         </div>
       </section>
- 
+
       <section class="section section--blush has-decos" id="why-open-score" tabindex="-1">
         ${OS.decos('about-why')}
         <div class="wrap center">
@@ -108,7 +107,7 @@
           </ul>
         </div>
       </section>
- 
+
       <section class="section has-decos">
         ${OS.decos('about-team')}
         <div class="wrap center">
@@ -125,7 +124,7 @@
           <a class="text-link text-link--ink" href="#/team">Meet our team →</a>
         </div>
       </section>
- 
+
       <section class="cta-band cta-band--ink has-decos">
         ${OS.decos('about-cta')}
         <div class="wrap center">
@@ -136,7 +135,7 @@
       </section>`
     };
   };
- 
+
   /* -------------------------------------------------------------- OUR TEAM */
   // Photo for the Our Team page. If a founder has a separate photo (framePhoto)
   // and an empty frame image (photo), the photo is placed inside the frame.
@@ -145,12 +144,12 @@
     return `
       <div class="photo photo--founder has-img" style="position:relative;overflow:visible">
         <img src="${esc(p.framePhoto)}" alt="${esc(p.name)}" loading="lazy"
-             style="position:absolute;left:14%;top:13%;width:71%;height:73%;object-fit:cover;border-radius:6px;transform:rotate(6deg)">
+             style="position:absolute;left:14%;top:13%;width:71%;height:73%;object-fit:cover;border-radius:6px;transform:rotate(4deg)">
         <img src="${esc(p.photo)}" alt="" aria-hidden="true" loading="lazy" onerror="this.remove()"
              style="position:relative;display:block;width:100%;height:auto">
       </div>`;
   }
- 
+
   V.team = function () {
     const team = window.OPEN_SCORE_TEAM || [];
     return {
@@ -166,7 +165,7 @@
         <span class="page-hero__glyph" aria-hidden="true" style="color:var(--sky)">♪</span>
         </div>
       </section>
- 
+
       <section class="section founders has-decos">
         ${OS.decos('founders')}
         <div class="wrap">
@@ -188,12 +187,12 @@
             </article>`).join('')}
         </div>
       </section>
- 
+
       <section class="section section--sky-tint story">
         <span class="quote__glyph" aria-hidden="true">♪</span>
         <div class="wrap">
           <h2 class="quote__text story__title">“We started <span style="color:var(--hot-pink)">Open Score</span><br>because…”</h2>
- 
+
           <div class="story__row">
             <figure class="polaroid polaroid--right" style="--tape:var(--butter)">
               <img src="assets/images/story-the-three-of-us.jpg" alt="The three Open Score founders watching a pink sunset over a lake and mountains" loading="lazy">
@@ -204,7 +203,7 @@
               <p>The three of us met at Point CounterPoint, a rigorous chamber music program in Vermont. Throughout our time there, we bonded over our shared experiences of being introduced to instruments at a young age and realized how much we wished we had been given more time to explore our own musical interests and passions.</p>
             </div>
           </div>
- 
+
           <div class="story__row story__row--flip">
             <div class="story__text">
               <p>Because we all love working with children and sharing our love of music, we created The Open Score Project to give future generations the opportunity to discover their own musical paths from an early age.</p>
@@ -218,7 +217,7 @@
           </div>
         </div>
       </section>
- 
+
       <section class="section why-teach">
         <div class="wrap why-teach__grid">
           <h2 class="h2">Why we<br>teach.</h2>
@@ -227,7 +226,7 @@
           <div class="value value--3"><h3 style="color:var(--hot-pink)">Connection</h3><p>Music brings people<br>together.</p></div>
         </div>
       </section>
- 
+
       <section class="cta-band cta-band--pink">
         <div class="wrap center">
           <h2 class="h2">Come learn with us.</h2>
@@ -237,7 +236,7 @@
       </section>`
     };
   };
- 
+
   /* --------------------------------------------------------------- CONTACT */
   const CONTACT_FIELDS = [
     { name: 'name', label: 'Name', type: 'text', required: true, placeholder: 'Your name', autocomplete: 'name', color: 'var(--blue)', errorMessage: 'Enter your name.' },
@@ -245,7 +244,7 @@
     { name: 'topic', label: 'I’m reaching out about', type: 'select', required: true, options: ['Classes', 'Registration', 'Volunteering or teaching', 'Something else'], color: 'var(--orange-ink)' },
     { name: 'message', label: 'Message', type: 'textarea', required: true, placeholder: 'Tell us a bit about what you need...', color: 'var(--green-ink)', errorMessage: 'Write a message so we know how to help.' }
   ];
- 
+
   V.contact = function () {
     const email = OS.config.contactEmail;
     const ig = OS.config.instagramHandle;
@@ -261,7 +260,7 @@
           <p class="lead">Have a question about Open Score, our classes, or getting started? We’d love to hear from you.</p>
         </div>
       </section>
- 
+
       <section class="section section--tight has-decos">
         ${OS.decos('contact-main')}
         <div class="wrap contact-grid">
@@ -286,7 +285,7 @@
           </aside>
         </div>
       </section>
- 
+
       <section class="cta-band cta-band--sky">
         <span class="float-glyph fg-8" aria-hidden="true">♪</span>
         <span class="float-glyph fg-9" aria-hidden="true">★</span>
@@ -301,13 +300,13 @@
         const area = root.querySelector('[data-contact-area]');
         const formError = root.querySelector('[data-form-error]');
         OS.liveValidate(form, CONTACT_FIELDS);
- 
+
         form.addEventListener('submit', async (e) => {
           e.preventDefault();
           formError.textContent = '';
           const { valid, values } = OS.validateForm(form, CONTACT_FIELDS);
           if (!valid) return;
- 
+
           if (!OS.config.backendConnected) {
             // No backend yet: hand the message to the visitor's email app.
             const subject = `Open Score question: ${values.topic}`;
@@ -325,7 +324,7 @@
             window.location.href = mailto;
             return;
           }
- 
+
           const btn = form.querySelector('button[type="submit"]');
           btn.disabled = true; btn.textContent = 'Sending…';
           try {
@@ -346,18 +345,18 @@
       }
     };
   };
- 
+
   /* --------------------------------------------------------------- CLASSES */
   // Remembered while the visitor moves around the site.
   const classesState = { calendarOpen: false, year: null, month: null };
- 
+
   function defaultCalendarMonth(classes) {
     const today = new Date(); today.setHours(0, 0, 0, 0);
     const next = classes.find((c) => OS.parseDate(c.date) >= today) || classes[0];
     const d = next ? OS.parseDate(next.date) : today;
     return { year: d.getFullYear(), month: d.getMonth() };
   }
- 
+
   function renderCalendar(classes, year, month) {
     const first = new Date(year, month, 1);
     const daysInMonth = new Date(year, month + 1, 0).getDate();
@@ -367,7 +366,7 @@
       const d = OS.parseDate(c.date);
       return d.getFullYear() === year && d.getMonth() === month;
     });
- 
+
     const cells = [];
     for (let i = 0; i < first.getDay(); i++) cells.push('<div class="cal-cell cal-cell--empty" aria-hidden="true"></div>');
     for (let day = 1; day <= daysInMonth; day++) {
@@ -387,7 +386,7 @@
             </a>`).join('')}
         </div>`);
     }
- 
+
     return `
       <div class="calendar" role="group" aria-labelledby="cal-title">
         <div class="calendar__head">
@@ -402,12 +401,16 @@
         ${inMonth.length ? '' : `<p class="calendar__empty">No classes scheduled in ${OS.MONTHS[month]}. Try another month, or browse the list below.</p>`}
       </div>`;
   }
- 
+
   V.classes = function () {
     const classes = OS.getClasses();
     if (classesState.year === null) Object.assign(classesState, defaultCalendarMonth(classes));
- 
-    const rows = classes.map((c, i) => `
+
+    // Classes from the Google Sheet: list upcoming sessions only (past ones stay on the calendar).
+    const today = new Date(); today.setHours(0, 0, 0, 0);
+    const listed = OS.classesSource === 'sheet' ? classes.filter((c) => OS.parseDate(c.date) >= today) : classes;
+
+    const rows = listed.map((c, i) => `
       <article class="class-row" style="--accent:var(--${esc(c.color)})" ${i === 0 ? 'id="upcoming-classes" tabindex="-1"' : ''}>
         <span class="class-row__num" aria-hidden="true">${String(i + 1).padStart(2, '0')}</span>
         <div class="class-row__body">
@@ -418,7 +421,7 @@
         <div class="class-row__status">${OS.statusBadge(c)}</div>
       </article>
       ${OS.staff(OS.STAFF_COLORS[i % OS.STAFF_COLORS.length], 'staff--row', `classes-staff-${(i % 3) + 1}.png`)}`).join('');
- 
+
     return {
       title: 'Classes · The Open Score Project',
       nav: 'classes',
@@ -431,7 +434,7 @@
         </div>
         ${OS.deco('classes-hero.png', 'deco--classes')}
       </section>
- 
+
       <section class="classes-intro wrap">
         <div class="classes-intro__text">
           <h2 class="h3">A look at our classes</h2>
@@ -442,14 +445,14 @@
           <span data-calendar-toggle-label>${classesState.calendarOpen ? 'Hide calendar ↑' : 'View calendar ⌄'}</span>
         </button>
       </section>
- 
+
       <div class="calendar-region wrap ${classesState.calendarOpen ? 'is-open' : ''}" id="calendar-region">
         <div class="calendar-region__inner" ${classesState.calendarOpen ? '' : 'inert'}>
           <div data-calendar>${renderCalendar(classes, classesState.year, classesState.month)}</div>
           <button class="text-link text-link--small" type="button" data-scroll-to="upcoming-classes">↓ Upcoming classes</button>
         </div>
       </div>
- 
+
       <section class="class-list" aria-label="Upcoming classes">
         <div class="wrap">${rows ? '' : '<p class="calendar__empty">No classes are scheduled right now. Check back soon!</p>'}</div>
         ${rows}
@@ -460,7 +463,7 @@
         const region = root.querySelector('#calendar-region');
         const inner = region.querySelector('.calendar-region__inner');
         const calHost = root.querySelector('[data-calendar]');
- 
+
         toggle.addEventListener('click', () => {
           classesState.calendarOpen = !classesState.calendarOpen;
           const open = classesState.calendarOpen;
@@ -469,7 +472,7 @@
           label.textContent = open ? 'Hide calendar ↑' : 'View calendar ⌄';
           if (open) inner.removeAttribute('inert'); else inner.setAttribute('inert', '');
         });
- 
+
         calHost.addEventListener('click', (e) => {
           const btn = e.target.closest('[data-cal-step]');
           if (!btn) return;
@@ -483,14 +486,14 @@
       }
     };
   };
- 
+
   /* ---------------------------------------------------------- CLASS DETAIL */
   const NUM_COLORS = ['var(--pink)', 'var(--orange)', 'var(--blue)', 'var(--green)'];
- 
+
   function closedMessage(c) {
     return c.registrationStatus === 'full' ? ['This class<br>is full.', 'Class full'] : ['Registration<br>is closed.', 'Registration closed'];
   }
- 
+
   V.classDetail = function (slug) {
     const c = OS.getClassBySlug(slug);
     if (!c) return V.notFound('We couldn’t find that class.');
@@ -503,7 +506,7 @@
     const ctaAction = open
       ? `<a class="btn btn--butter" href="${OS.registerUrl(c)}">Register for this class →</a>`
       : '<a class="btn btn--butter" href="#/classes">See open classes →</a>';
- 
+
     return {
       title: `${c.title} · The Open Score Project`,
       nav: 'classes',
@@ -524,14 +527,14 @@
           <span class="detail-hero__glyphs" aria-hidden="true"><span>♫</span><span>♪</span></span>
         </div>
       </section>
- 
+
       <section class="section section--tight">
         <div class="wrap">
           <h2 class="h2">About this<br>class.</h2>
           <p class="detail-about">${esc(c.fullDescription)}</p>
         </div>
       </section>
- 
+
       <section class="section section--tight">
         <div class="wrap">
           <h2 class="h2">What you’ll<br>learn.</h2>
@@ -547,7 +550,7 @@
           </ol>
         </div>
       </section>
- 
+
       <section class="section section--tight">
         <div class="wrap">
           <h2 class="h2">What you’ll<br>need.</h2>
@@ -560,7 +563,7 @@
           </ul>
         </div>
       </section>
- 
+
       <section class="detail-cta">
         <div class="wrap">
           <h2 class="detail-cta__title">${ctaTitle}</h2>
@@ -571,14 +574,14 @@
       </section>`
     };
   };
- 
+
   /* ---------------------------------------------------------- REGISTRATION */
   V.register = function (slug) {
     const c = OS.getClassBySlug(slug);
     if (!c) return V.notFound('We couldn’t find that class.');
     const fields = window.OPEN_SCORE_REGISTRATION_FIELDS || [];
     const when = `${OS.formatLongDate(c.date)} · ${OS.formatTimeRange(c.startTime, c.endTime)} · ${c.format} · ${c.level}`;
- 
+
     // Full or closed classes never show the form, even via a direct link.
     if (!OS.isOpen(c)) {
       return {
@@ -596,7 +599,7 @@
         </section>`
       };
     }
- 
+
     return {
       title: `Register · ${c.title}`,
       nav: 'classes',
@@ -607,13 +610,13 @@
           <div class="register__main">
             <p class="eyebrow eyebrow--pink">Registration</p>
             <h1 class="page-hero__title">Save your<br>spot.</h1>
- 
+
             <div class="selected-class">
               <p class="selected-class__label">You’re registering for</p>
               <p class="selected-class__title">${esc(c.title)}</p>
               <p class="selected-class__when">${esc(when)}</p>
             </div>
- 
+
             <form class="form-card" novalidate data-register-form>
               ${fields.map((f) => OS.field(f, 'reg')).join('')}
               <p class="form-note">* Required. Registration questions may change as Open Score finalizes the program.</p>
@@ -629,13 +632,13 @@
         const form = root.querySelector('[data-register-form]');
         const formError = root.querySelector('[data-form-error]');
         OS.liveValidate(form, fields);
- 
+
         form.addEventListener('submit', async (e) => {
           e.preventDefault();
           formError.textContent = '';
           const { valid, values } = OS.validateForm(form, fields);
           if (!valid) return;
- 
+
           const btn = form.querySelector('button[type="submit"]');
           btn.disabled = true; btn.textContent = 'Submitting…';
           try {
@@ -643,14 +646,16 @@
             OS.app.show(V.confirmation(c, values.guardianEmail || ''));
           } catch (err) {
             console.error(err);
-            formError.textContent = 'We couldn’t submit your registration. Check your connection and try again.';
+            formError.textContent = /filled up|closed/i.test(err.message)
+              ? err.message
+              : 'We couldn’t submit your registration. Check your connection and try again.';
             btn.disabled = false; btn.textContent = 'Submit registration →';
           }
         });
       }
     };
   };
- 
+
   /* ---------------------------------------------------------- CONFIRMATION */
   V.confirmation = function (c, email) {
     const emailLine = OS.config.emailConfirmationsEnabled
@@ -672,7 +677,7 @@
       mount(root) { root.querySelector('.confirmation__title').focus(); }
     };
   };
- 
+
   /* -------------------------------------------------------------- NOT FOUND */
   V.notFound = function (message) {
     return {
@@ -690,4 +695,3 @@
     };
   };
 })();
- 

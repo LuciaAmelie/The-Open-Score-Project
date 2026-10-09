@@ -112,5 +112,8 @@
 
   OS.app = { render, show };
   window.addEventListener('hashchange', render);
-  render();
+
+  // Load classes (from Google Sheets if connected), then show the page.
+  main.innerHTML = '<p class="page-loading" role="status">Loading… ♪</p>';
+  Promise.resolve(OS.loadClasses ? OS.loadClasses() : null).catch(() => {}).then(render);
 })();
