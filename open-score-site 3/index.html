@@ -1,0 +1,53 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>The Open Score Project</title>
+  <meta name="description" content="Free live online music classes that help young musicians build skills, curiosity, and confidence.">
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='88'>♪</text></svg>">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&family=Fredoka:wght@400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+  <a class="skip-link" href="#main" data-skip-link>Skip to content</a>
+
+  <header class="site-header">
+    <nav class="nav" aria-label="Main">
+      <a class="nav-logo" href="#/" aria-label="The Open Score Project home" data-logo></a>
+
+      <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="nav-links">
+        <span class="nav-toggle__bars" aria-hidden="true"></span>
+        <span class="nav-toggle__label">Menu</span>
+      </button>
+
+      <ul class="nav-links" id="nav-links">
+        <li><a href="#/about" data-nav="about">About</a></li>
+        <li><a href="#/classes" data-nav="classes">Classes</a></li>
+        <li><a href="#/team" data-nav="team">Our Team</a></li>
+        <li><a href="#/contact" data-nav="contact">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main id="main" tabindex="-1"></main>
+
+  <noscript>
+    <p class="noscript">The Open Score Project website needs JavaScript turned on to show classes and forms.</p>
+  </noscript>
+
+  <!-- Order matters: config and data first, then helpers, then pages, then the app. -->
+  <script src="js/config.js"></script>
+  <script src="js/data/classes.js"></script>
+  <script src="js/data/team.js"></script>
+  <script src="js/data/registration-fields.js"></script>
+  <script src="js/data/decorations.js"></script>
+  <script src="js/utils.js"></script>
+  <script src="js/services/api.js"></script>
+  <script src="js/components.js"></script>
+  <script src="js/views.js"></script>
+  <script src="js/app.js"></script>
+</body>
+</html>
