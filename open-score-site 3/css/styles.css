@@ -715,3 +715,16 @@ select.input { appearance: none; -webkit-appearance: none; padding-right: 48px; 
 @media (prefers-reduced-motion: reduce) {
   *, *::before, *::after { animation: none !important; transition: none !important; scroll-behavior: auto !important; }
 }
+
+/* ---------- Founders: gingham + flower peek up from the bottom (like Figma) ---------- */
+.founders { overflow: hidden; padding-bottom: clamp(160px, 18vw, 280px); }
+.founders .deco--placed[src$="team-founders-doodle.png"] { top: auto !important; bottom: -29vw; }
+.founders .deco--placed[src$="team-founders-flower.png"] { top: auto !important; bottom: -6vw; }
+
+/* ---------- Founders: text placement like Figma ---------- */
+.founders .wrap { width: min(100% - 2 * var(--gutter), 1300px); }
+.founder { grid-template-columns: auto minmax(0, 1fr); gap: clamp(24px, 3vw, 48px); align-items: start; }
+.founder--flip { grid-template-columns: minmax(0, 1fr) auto; }
+.founder__text { padding-top: clamp(0px, 3vw, 48px); max-width: 680px; }
+.founder--flip .founder__text { justify-self: end; }
+.founder__bio { max-width: none; }
