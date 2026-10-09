@@ -1,4 +1,3 @@
-
 /*
  * Founders shown on the About page and the Our Team page.
  * photo:      framed photo for the Our Team page (assets/images/).
@@ -64,7 +63,6 @@ window.OPEN_SCORE_TEAM = [
     color: '#582ca0',
     photo: 'assets/images/founder-cat.png',
     photoSmall: 'assets/images/founder-cat-photo.jpg',
-    bio: '[Founder’s 2–3 sentence bio goes here — their connection to music and why they helped start Open Score.]'
+    bio: 'Catherine is a pianist with ten years of experience and has been immersed in music education from a young age. Her own experience showed her how difficult it can be to develop a real love for music when so much of learning revolves around practice and performance. She co-founded The Open Score Project because she believes every child should have access to a strong musical foundation and the opportunity to discover their love for music from the beginning of their journey.'
   }
 ];
- 
