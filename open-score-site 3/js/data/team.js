@@ -1,7 +1,9 @@
+
 /*
  * Founders shown on the About page and the Our Team page.
  * photo:      framed photo for the Our Team page (assets/images/).
- * photoSmall: plain photo for the round picture on the About page.
+ * framePhoto: (optional) a plain photo to place INSIDE an empty frame image.
+ * photoSmall: plain photo for the photo card on the About page.
  *             Missing files show the person's initials instead.
  * color: accent for the name label (any CSS color).
  * credentials: list shown in the "Credentials" dropdown on Our Team.
@@ -42,7 +44,8 @@ window.OPEN_SCORE_TEAM = [
     role: 'Co-Founder',
     color: '#4f8be3',
     photo: 'assets/images/founder-freya.png',
-    photoSmall: '',
+    framePhoto: 'assets/images/flic.jpg',
+    photoSmall: 'assets/images/flic.jpg',
     bio: 'Freya is a violinist/violist with 12 years of music experience. Through music, she wishes to connect and relate to people with different stories and backgrounds. Freya believes that music is a fundamental part of human connection and hopes to help introduce a love for music in everyone she meets.'
   },
   {
@@ -64,3 +67,4 @@ window.OPEN_SCORE_TEAM = [
     bio: '[Founder’s 2–3 sentence bio goes here — their connection to music and why they helped start Open Score.]'
   }
 ];
+ 
