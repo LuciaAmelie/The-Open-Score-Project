@@ -728,3 +728,14 @@ select.input { appearance: none; -webkit-appearance: none; padding-right: 48px; 
 .founder__text { padding-top: clamp(0px, 3vw, 48px); max-width: 680px; }
 .founder--flip .founder__text { justify-self: end; }
 .founder__bio { max-width: none; }
+
+/* ---------- Our Team on phones & tablets ---------- */
+@media (max-width: 900px) {
+  .founder, .founder--flip { grid-template-columns: 1fr; gap: 20px; justify-items: start; }
+  .founder--flip .photo--founder { order: 0; }
+  .founder--flip .founder__text { justify-self: start; }
+  .founder__text { padding-top: 0; max-width: none; width: 100%; }
+  .photo--founder, .photo--founder.has-img { width: min(100%, 360px); justify-self: center; }
+  .founders { padding-bottom: 64px; }
+  .quote__glyph { display: none; }
+}
