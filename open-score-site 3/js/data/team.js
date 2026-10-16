@@ -1,5 +1,6 @@
 /*
  * Founders shown on the About page and the Our Team page.
+ * The ORDER here is the order they appear on the website.
  * photo:      framed photo for the Our Team page (assets/images/).
  * framePhoto: (optional) a plain photo to place INSIDE an empty frame image.
  * photoSmall: plain photo for the photo card on the About page.
@@ -8,6 +9,24 @@
  * credentials: list shown in the "Credentials" dropdown on Our Team.
  */
 window.OPEN_SCORE_TEAM = [
+  {
+    name: 'Cat Koeppel',
+    credentials: [
+      'Ten years of piano training under concert pianist Mana Tokuno, specializing in piano performance',
+      'Experience in Taubman methodology through study with pianist David Shimoni',
+      'Four summers of intensive musical study at Point CounterPoint Music Program (2023–2026)',
+      'Participant at Cremona International Music Academy and Competition (2025–2026)',
+      'Studied under internationally renowned musicians, including Mark Lakirovich and Vladimir Panteleyev',
+      'International performance experience at the Museo del Violino in Cremona, Italy',
+      'Participation in 10+ chamber ensembles',
+      'Volunteer piano tutor with the Do Re Mi Project, a 501(c) nonprofit'
+    ],
+    role: 'Co-Founder',
+    color: '#582ca0',
+    photo: 'assets/images/founder-cat.png',
+    photoSmall: 'assets/images/founder-cat-photo.jpg',
+    bio: 'Catherine is a pianist with ten years of experience and has been immersed in music education from a young age. Her own experience showed her how difficult it can be to develop a real love for music when so much of learning revolves around practice and performance. She co-founded The Open Score Project because she believes every child should have access to a strong musical foundation and the opportunity to discover their love for music from the beginning of their journey.'
+  },
   {
     name: 'Violet Block',
     credentials: [
@@ -46,23 +65,5 @@ window.OPEN_SCORE_TEAM = [
     framePhoto: 'assets/images/flic.jpg',
     photoSmall: 'assets/images/flic.jpg',
     bio: 'Freya is a violinist/violist with 12 years of music experience. Through music, she wishes to connect and relate to people with different stories and backgrounds. Freya believes that music is a fundamental part of human connection and hopes to help introduce a love for music in everyone she meets.'
-  },
-  {
-    name: 'Cat Koeppel',
-    credentials: [
-      'Ten years of piano training under concert pianist Mana Tokuno, specializing in piano performance',
-      'Experience in Taubman methodology through study with pianist David Shimoni',
-      'Four summers of intensive musical study at Point CounterPoint Music Program (2023–2026)',
-      'Participant at Cremona International Music Academy and Competition (2025–2026)',
-      'Studied under internationally renowned musicians, including Mark Lakirovich and Vladimir Panteleyev',
-      'International performance experience at the Museo del Violino in Cremona, Italy',
-      'Participation in 10+ chamber ensembles',
-      'Volunteer piano tutor with the Do Re Mi Project, a 501(c) nonprofit'
-    ],
-    role: 'Co-Founder',
-    color: '#582ca0',
-    photo: 'assets/images/founder-cat.png',
-    photoSmall: 'assets/images/founder-cat-photo.jpg',
-    bio: 'Catherine is a pianist with ten years of experience and has been immersed in music education from a young age. Her own experience showed her how difficult it can be to develop a real love for music when so much of learning revolves around practice and performance. She co-founded The Open Score Project because she believes every child should have access to a strong musical foundation and the opportunity to discover their love for music from the beginning of their journey.'
   }
 ];
