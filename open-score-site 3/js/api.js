@@ -1,3 +1,4 @@
+
 /*
  * Sends form submissions to the Google Apps Script set in js/config.js
  * (formsEndpoint), which saves them to a Google Sheet and sends emails.
@@ -71,6 +72,42 @@
       OS.classesSource = 'sheet';
     } catch (err) {
       console.warn('Could not load classes from Google Sheets — using js/data/classes.js instead.', err);
+    } finally {
+      clearTimeout(timer);
+    }
+  };
+
+  /*
+   * Loads only founder biographies from the Team tab. Everything else
+   * (photos, credentials, colors, role, and founder order) stays in team.js.
+   * On failure, the original team.js biographies remain unchanged.
+   */
+  OS.loadTeam = async function () {
+    if (!OS.config.backendConnected) return;
+    const controller = new AbortController();
+    const timer = setTimeout(() => controller.abort(), 6000);
+    try {
+      const res = await fetch(`${OS.config.formsEndpoint}?action=team`, { signal: controller.signal });
+      if (!res.ok) throw new Error(`Team service replied ${res.status}`);
+      const data = await res.json();
+      if (!data || !data.ok || !Array.isArray(data.team)) return;
+
+      const existing = window.OPEN_SCORE_TEAM;
+      if (!Array.isArray(existing)) return;
+
+      const biosByName = new Map(
+        data.team
+          .filter((person) => person && typeof person.name === 'string' && typeof person.bio === 'string')
+          .map((person) => [person.name.trim().toLowerCase(), person.bio])
+      );
+
+      // Merge bios by name, not by row number; preserve original founder order.
+      window.OPEN_SCORE_TEAM = existing.map((person) => {
+        const bio = biosByName.get(String(person.name).trim().toLowerCase());
+        return bio === undefined ? person : { ...person, bio };
+      });
+    } catch (err) {
+      console.warn('Could not load founder bios from Google Sheets — using js/data/team.js instead.', err);
     } finally {
       clearTimeout(timer);
     }
