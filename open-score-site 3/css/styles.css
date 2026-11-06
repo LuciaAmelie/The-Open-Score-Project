@@ -762,12 +762,13 @@ select.input { appearance: none; -webkit-appearance: none; padding-right: 48px; 
 }
 
 
-/* Cat's new photo — slightly smaller and centered */
+
+/* Cat's new photo — centered inside purple frame */
 .founders .founder:first-of-type .photo--founder.has-img > img {
   position: absolute;
   top: 10%;
-  left: 25%;
-  width: 65%;
+  left: 14%;
+  width: 72%;
   height: 80%;
   max-width: none;
   object-fit: cover;
@@ -775,6 +776,7 @@ select.input { appearance: none; -webkit-appearance: none; padding-right: 48px; 
   border-radius: 22px;
   display: block;
 }
+
 
 
 /* Purple hand-drawn heart frame on top */
