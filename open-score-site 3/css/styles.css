@@ -761,19 +761,21 @@ select.input { appearance: none; -webkit-appearance: none; padding-right: 48px; 
   transform: none;
 }
 
-/* Cat's new photo, cropped inside the frame */
+
+/* Cat's new photo — slightly smaller and centered */
 .founders .founder:first-of-type .photo--founder.has-img > img {
   position: absolute;
-  top: 9%;
-  left: 13%;
-  width: 74%;
-  height: 82%;
+  top: 10%;
+  left: 14%;
+  width: 72%;
+  height: 80%;
   max-width: none;
   object-fit: cover;
-  object-position: 43% center;
+  object-position: 48% center;
   border-radius: 22px;
   display: block;
 }
+
 
 /* Purple hand-drawn heart frame on top */
 .founders .founder:first-of-type .photo--founder.has-img::after {
