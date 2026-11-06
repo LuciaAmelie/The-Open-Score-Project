@@ -766,8 +766,8 @@ select.input { appearance: none; -webkit-appearance: none; padding-right: 48px; 
 .founders .founder:first-of-type .photo--founder.has-img > img {
   position: absolute;
   top: 10%;
-  left: 14%;
-  width: 72%;
+  left: 18%;
+  width: 65%;
   height: 80%;
   max-width: none;
   object-fit: cover;
