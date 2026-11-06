@@ -766,8 +766,8 @@ select.input { appearance: none; -webkit-appearance: none; padding-right: 48px; 
 /* Cat's new photo — centered inside purple frame */
 .founders .founder:first-of-type .photo--founder.has-img > img {
   position: absolute;
-  top: 12%;
-  left: 10%;
+  top: 10%;
+  left: 12%;
   width: 72%;
   height: 80%;
   max-width: none;
