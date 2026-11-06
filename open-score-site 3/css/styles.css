@@ -739,3 +739,59 @@ select.input { appearance: none; -webkit-appearance: none; padding-right: 48px; 
   .founders { padding-bottom: 64px; }
   .quote__glyph { display: none; }
 }
+
+
+/* ==========================================
+   CAT KOE PPEL — PHOTO WITH PURPLE HEART FRAME
+   Only affects Cat's photo on the Team page
+   ========================================== */
+
+/* Container for Cat's photo and frame */
+.founders .founder:first-of-type .photo--founder.has-img {
+  position: relative;
+  width: clamp(260px, 36vw, 520px);
+  aspect-ratio: 1 / 1.12;
+  height: auto;
+  overflow: visible;
+  display: block;
+  background: transparent;
+  border: none;
+  border-radius: 0;
+  box-shadow: none;
+  transform: none;
+}
+
+/* Cat's new photo, cropped inside the frame */
+.founders .founder:first-of-type .photo--founder.has-img > img {
+  position: absolute;
+  top: 9%;
+  left: 13%;
+  width: 74%;
+  height: 82%;
+  max-width: none;
+  object-fit: cover;
+  object-position: 43% center;
+  border-radius: 22px;
+  display: block;
+}
+
+/* Purple hand-drawn heart frame on top */
+.founders .founder:first-of-type .photo--founder.has-img::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background-image: url('../assets/images/Wobbly%20Purple%20Heart%20Frame.png');
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 100% 100%;
+  pointer-events: none;
+  z-index: 2;
+}
+
+/* Responsive sizing */
+@media (max-width: 900px) {
+  .founders .founder:first-of-type .photo--founder.has-img {
+    width: min(100%, 360px);
+  }
+}
+
