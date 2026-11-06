@@ -10,7 +10,7 @@
  *   Match SEND_FAMILY_CONFIRMATION in the Apps Script.
  */
 window.OPEN_SCORE_CONFIG = {
-  formsEndpoint: 'https://script.google.com/macros/s/AKfycbzbjlqvJBqb3mEVCeAJBUI4KEdrLp6yP-WpQR_tkYV1wt6Z2aWlfCvvB3MYTOUxxuaKtg/exec',
+  formsEndpoint: 'https://script.google.com/macros/s/AKfycbysP9miz8Hk1gsTgwuNV94ui9vqJalyuk67vwzsvYHxUrAl3jzf2Wt6IJGf-2H_LoVRrQ/exec',
   familyConfirmationEmails: true,
 
   contactEmail: 'theopenscoreproject.info@gmail.com',
